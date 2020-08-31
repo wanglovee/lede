@@ -14,7 +14,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-fan
+name: OpenWrt-CI
 
 on:
   schedule:
@@ -65,8 +65,6 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone https://github.com/pymumu/openwrt-smartdns.git
-          git clone https://github.com/pymumu/luci-app-smartdns.git
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
@@ -162,7 +160,6 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
-          CONFIG_PACKAGE_luci-app-smartdns=y
           EOF
           # LuCI主题:
           cat >> .config <<EOF
