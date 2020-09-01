@@ -156,7 +156,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=y
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=y
           CONFIG_PACKAGE_luci-app-docker=y
-          CONFIG_PACKAGE_luci-app-samba4=y
           EOF
           # LuCI主题:
           cat >> .config <<EOF
